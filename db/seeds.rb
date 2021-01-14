@@ -7,6 +7,7 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 Genre.create([
   { name: "肉類" },
+  { name: "海鮮類" },
   { name: "野菜類" },
   { name: "乳製品" },
   { name: "その他" },
