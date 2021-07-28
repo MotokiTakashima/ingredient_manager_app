@@ -1,6 +1,6 @@
 class PostsController < ApplicationController
   def index
-    @post = Post.new
+    @posts = Post.order(id: :asc)
   end
 
   def show
@@ -28,6 +28,6 @@ class PostsController < ApplicationController
   private
 
   def post_params
-    params.require(:post).permit(:title, :content)
+    params.require(:post).permit(:product, :date)
   end
 end
