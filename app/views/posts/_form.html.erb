@@ -1,10 +1,11 @@
+<%= render "layouts/error_messages" %>
 <%= form_with model: @post, local: true do |form| %>
   <div>
-    <%= form.label :product, "商品" %>
+    <%= form.label :product %>
     <%= form.text_field :product %>
   </div>
   <div>
-    <%= form.label :date, "日付" %>
+    <%= form.label :date %>
     <%= form.text_field :date %>
   </div>
   <div>
