@@ -26,3 +26,9 @@
     border: 2px solid red;
   }
 }
+// 共通
+.base-container {
+  @extend .container-fluid;
+  max-width: var(--breakpoint-lg);
+  padding: 30px 15px;
+}
