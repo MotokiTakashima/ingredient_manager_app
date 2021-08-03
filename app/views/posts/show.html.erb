@@ -1,3 +1,9 @@
-<h1>投稿詳細</h1>
-<p>商品 <%= @post.product %></p>
-<p>日付 <%= @post.date %></p>
+<h1 class="text-center">詳細表示</h1>
+<section class="card border-dark mt-5">
+  <div class="card-header">
+    <h4><%= @post.product %></h4>
+  </div>
+  <div class="card-body">
+    <p class="card-text"><%= @post.date %></p>
+  </div>
+</section>
