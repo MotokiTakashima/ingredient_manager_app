@@ -1,6 +1,6 @@
-<h1>投稿一覧</h1>
-<table>
-  <thead>
+<h1 class="text-center">投稿一覧</h1>
+<table class="table table-bordered table-striped mt-4">
+  <thead class="table-primary">
     <tr>
       <th scope="col">No.</th>
       <th scope="col">商品</th>
@@ -11,13 +11,19 @@
   <tbody>
     <% @posts.each.with_index(1) do |post, i| %>
       <tr>
-        <th scope="row"><%= i %></th>
-        <td><%= post.product %></td>
-        <td><%= post.date %></td>
-        <td>
-          <%= link_to "詳細", post %>
-          <%= link_to "編集", edit_post_path(post) %>
-          <%= link_to "削除", post, method: :delete, data: { confirm: "削除しますか?" } %>
+        <th scope="row" class="text-right"><%= i %></th>
+        <td class="break-word"><%= post.product %></td>
+        <td class="break-word"><%= post.date %></td>
+        <td class="text-nowrap">
+          <%= link_to post, class: "btn btn-primary" do %>
+            <i class="fas fa-envelope-open-text"></i> <span class="d-none d-md-inline"> 詳細</span>
+          <% end %>
+          <%= link_to edit_post_path(post), class: "btn btn-success" do %>
+            <i class="far fa-edit"></i> <span class="d-none d-md-inline"> 編集</span>
+          <% end %>
+          <%= link_to post, method: :delete, data: { confirm: "削除しますか?" }, class: "btn btn-danger" do %>
+            <i class="far fa-trash-alt"></i> <span class="d-none d-md-inline"> 削除</span>
+          <% end %>
         </td>
       </tr>
     <% end %>
