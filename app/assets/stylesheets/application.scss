@@ -22,8 +22,9 @@
 .field_with_errors {
   display: contents;
 
-  input {
-    border: 2px solid red;
+  input,
+  textarea {
+    @extend .is-invalid;
   }
 }
 // 共通
