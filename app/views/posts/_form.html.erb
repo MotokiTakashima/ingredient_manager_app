@@ -2,11 +2,11 @@
 <%= form_with model: @post, local: true do |form| %>
   <div>
     <%= form.label :product %>
-    <%= form.text_field :product, class: "form-control" %>
+    <%= form.text_field :product, class: "form-control", required: true, maxlength: 20 %>
   </div>
   <div>
     <%= form.label :date %>
-    <%= form.text_field :date, class: "form-control", rows: 10 %>
+    <%= form.text_field :date, class: "form-control", rows: 10, required: true, maxlength: 10 %>
   </div>
   <div>
     <%= form.submit button_value, class: "btn btn-primary btn-block" %>
