@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  root "posts#index"
+  root "posts#top"
   devise_for :users, controllers: {
        registrations: "users/registrations",
        passwords: "users/passwords"
