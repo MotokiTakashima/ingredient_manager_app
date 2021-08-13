@@ -4,7 +4,8 @@
     <tr>
       <th scope="col">No.</th>
       <th scope="col">商品</th>
-      <th scope="col">日付</th>
+      <th scope="col">購入日</th>
+      <th scope="col">期限</th>
       <th scope="col"></th>
     </tr>
   </thead>
@@ -14,6 +15,7 @@
         <th scope="row" class="text-right"><%= i %></th>
         <td class="break-word"><%= post.product %></td>
         <td class="break-word"><%= post.date %></td>
+        <td class="break-word"><%= post.start_time %></td>
         <td class="text-nowrap">
           <%= link_to post, class: "btn btn-primary" do %>
             <i class="fas fa-envelope-open-text"></i> <span class="d-none d-md-inline"> 詳細</span>
