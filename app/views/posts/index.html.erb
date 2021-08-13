@@ -45,7 +45,7 @@
           </tr>
         </thead>
       </table>
-      <%= form_with(model: @post, local: true) do |form| %>
+      <%= form_with model: @post, local: true do |form| %>
         <div class="title">
           <div class="form-tag">商品</div>
           <%= form.text_field :product %>
@@ -64,7 +64,7 @@
         <%= date.day %>
         <% posts.each do |post| %>
           <div>
-            <%= link_to post.title, post %>
+            <%= link_to post.product, post %>
           </div>
         <% end %>
       <% end %>

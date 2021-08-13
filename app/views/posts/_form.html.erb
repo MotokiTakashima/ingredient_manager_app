@@ -5,8 +5,8 @@
     <%= form.text_field :product, class: "form-control" %>
   </div>
   <div>
-    <%= form.label :date %>
-    <%= form.text_field :date, class: "form-control", rows: 10 %>
+    <%= form.label :start_time %>
+    <%= form.date_select :start_time, class: "form-control" %>
   </div>
   <div>
     <%= form.submit button_value, class: "btn btn-primary btn-block" %>
