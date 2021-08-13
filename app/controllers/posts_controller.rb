@@ -4,6 +4,7 @@ class PostsController < ApplicationController
 
   def index
     @posts = Post.order(id: :asc)
+    @post = Post.new
   end
 
   def show
@@ -16,7 +17,7 @@ class PostsController < ApplicationController
   def create
     @post = Post.new(post_params)
     if @post.save
-      redirect_to @post, notice: "投稿しました"
+      redirect_to posts_path, notice: "投稿しました"
     else
       flash.now[:alert] = "投稿に失敗しました"
       render :new
@@ -28,7 +29,7 @@ class PostsController < ApplicationController
 
   def update
     if @post.update(post_params)
-      redirect_to @post, notice: "更新しました"
+      redirect_to posts_path, notice: "更新しました"
     else
       flash.now[:alert] = "更新に失敗しました"
       render :edit
@@ -37,7 +38,7 @@ class PostsController < ApplicationController
 
   def destroy
     @post.destroy!
-    redirect_to root_path, alert: "削除しました"
+    redirect_to posts_path, alert: "削除しました"
   end
 
   private

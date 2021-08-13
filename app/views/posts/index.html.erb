@@ -4,7 +4,8 @@
     <tr>
       <th scope="col">No.</th>
       <th scope="col">商品</th>
-      <th scope="col">日付</th>
+      <th scope="col">購入日</th>
+      <th scope="col">期限</th>
       <th scope="col"></th>
     </tr>
   </thead>
@@ -14,6 +15,7 @@
         <th scope="row" class="text-right"><%= i %></th>
         <td class="break-word"><%= post.product %></td>
         <td class="break-word"><%= post.date %></td>
+        <td class="break-word"><%= post.start_time.strftime("%y-%m-%d") %></td>
         <td class="text-nowrap">
           <%= link_to post, class: "btn btn-primary" do %>
             <i class="fas fa-envelope-open-text"></i> <span class="d-none d-md-inline"> 詳細</span>
@@ -27,5 +29,45 @@
         </td>
       </tr>
     <% end %>
+    <br>
+    <br>
   </tbody>
 </table>
+<div class="toppage">
+  <h1 class="top">カレンダー</h1>
+  <br>
+  <div class="row">
+    <div class="col-md-4">
+      <div class="schedule">今後の予定一覧</div>
+      <table class="table">
+        <thead class="thead-light">
+          <tr>
+            <th>タイトル</th>
+            <th>日程</th>
+          </tr>
+        </thead>
+      </table>
+      <%= form_with model: @post, local: true do |form| %>
+        <div class="title">
+          <div class="form-tag">商品</div>
+          <%= form.text_field :product %>
+        </div>
+        <div class="time">
+          <div class="form-tag">期限</div>
+          <%= form.date_select :start_time %>
+        </div>
+        <div class="submit">
+          <%= form.submit %>
+        </div>
+      <% end %>
+    </div>
+    <div class="col-md-8">
+      <%= month_calendar events: @posts do |date, posts| %>
+        <%= date.day %>
+        <% posts.each do |post| %>
+          <div>
+            <%= link_to post.product, post %>
+          </div>
+        <% end %>
+      <% end %>
+    </div>
