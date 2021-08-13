@@ -13,6 +13,12 @@
  *= require_tree .
  *= require_self
  */
+ 
+ /*
+ *= require simple_calendar
+ *= require_tree .
+ */
+ 
  @import "bootstrap/scss/bootstrap";
 
  $fa-font-path: '@fortawesome/fontawesome-free/webfonts';
