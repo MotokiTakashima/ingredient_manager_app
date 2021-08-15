@@ -15,7 +15,7 @@
         <th scope="row" class="text-right"><%= i %></th>
         <td class="break-word"><%= post.product %></td>
         <td class="break-word"><%= post.date %></td>
-        <td class="break-word"><%= post.start_time.strftime("%y-%m-%d") %></td>
+        <td class="break-word"><%= post.start_time.strftime("%Y-%m-%d") %></td>
         <td class="text-nowrap">
           <%= link_to post, class: "btn btn-primary" do %>
             <i class="fas fa-envelope-open-text"></i> <span class="d-none d-md-inline"> 詳細</span>
@@ -29,8 +29,6 @@
         </td>
       </tr>
     <% end %>
-    <br>
-    <br>
   </tbody>
 </table>
 <div class="toppage">
