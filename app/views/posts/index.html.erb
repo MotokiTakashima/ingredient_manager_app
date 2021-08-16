@@ -37,14 +37,6 @@
   <div class="row">
     <div class="col-md-4">
       <div class="schedule">今後の予定一覧</div>
-      <table class="table">
-        <thead class="thead-light">
-          <tr>
-            <th>タイトル</th>
-            <th>日程</th>
-          </tr>
-        </thead>
-      </table>
       <%= form_with model: @post, local: true do |form| %>
         <div class="title">
           <div class="form-tag">商品</div>
@@ -59,16 +51,17 @@
         </div>
       <% end %>
     </div>
-    <div class="col-md-8">
-      <%= month_calendar events: @posts do |date, posts| %>
-        <%= date.day %>
-        <% posts.each do |post| %>
-          <div>
-            <%= link_to post.product, post %>
-          </div>
-        <% end %>
-      <% end %>
-    </div>
   </div>
+  <div class="col-md-8">
+    <%= month_calendar events: @posts do |date, posts| %>
+      <%= date.day %>
+      <% posts.each do |post| %>
+        <div>
+          <%= link_to post.product, post %>
+        </div>
+      <% end %>
+    <% end %>
+  </div>
+</div>
 </div>
 </div>
