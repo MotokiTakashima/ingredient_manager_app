@@ -21,7 +21,7 @@
             <i class="fas fa-envelope-open-text"></i> <span class="d-none d-md-inline"> 詳細</span>
           <% end %>
           <%= link_to edit_post_path(post), class: "btn btn-success" do %>
-            <i class="far fa-edit"></i> <span class="d-none d-md-inline"> 編集</span>
+            <i class="far fa-edit"></i> <span class="d-none d-md-inline"> 更新</span>
           <% end %>
           <%= link_to post, method: :delete, data: { confirm: "削除しますか?" }, class: "btn btn-danger" do %>
             <i class="far fa-trash-alt"></i> <span class="d-none d-md-inline"> 削除</span>
@@ -31,37 +31,16 @@
     <% end %>
   </tbody>
 </table>
-<div class="toppage">
-  <h1 class="top">カレンダー</h1>
-  <br>
-  <div class="row">
-    <div class="col-md-4">
-      <div class="schedule">今後の予定一覧</div>
-      <%= form_with model: @post, local: true do |form| %>
-        <div class="title">
-          <div class="form-tag">商品</div>
-          <%= form.text_field :product %>
-        </div>
-        <div class="time">
-          <div class="form-tag">期限</div>
-          <%= form.date_select :start_time %>
-        </div>
-        <div class="submit">
-          <%= form.submit %>
-        </div>
-      <% end %>
-    </div>
-  </div>
-  <div class="col-md-8">
-    <%= month_calendar events: @posts do |date, posts| %>
-      <%= date.day %>
-      <% posts.each do |post| %>
-        <div>
-          <%= link_to post.product, post %>
-        </div>
-      <% end %>
+<div class="col-md-8">
+  <%= month_calendar events: @posts do |date, posts| %>
+    <%= date.day %>
+    <% posts.each do |post| %>
+      <div>
+        <%= link_to post.product, post %>
+      </div>
     <% end %>
-  </div>
+  <% end %>
+</div>
 </div>
 </div>
 </div>
