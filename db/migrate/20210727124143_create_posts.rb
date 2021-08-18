@@ -4,6 +4,7 @@ class CreatePosts < ActiveRecord::Migration[6.1]
       t.string :product
       t.date :date
       t.datetime :start_time
+      t.datetime :end_time
 
       t.timestamps
     end
