@@ -48,6 +48,6 @@ class PostsController < ApplicationController
   end
 
   def post_params
-    params.require(:post).permit(:product, :date, :start_time, :end_time)
+    params.require(:post).permit(:product, :date, :start_time)
   end
 end

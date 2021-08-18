@@ -7,8 +7,7 @@ ja:
       post:
         product: タイトル
         date: 購入日
-        start_time: 購入日
-        end_time: 期限
+        start_time: 期限
     errors:
       messages:
         record_invalid: "バリデーションに失敗しました: %{errors}"
