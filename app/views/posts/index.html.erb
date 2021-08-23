@@ -14,12 +14,9 @@
       <tr>
         <th scope="row" class="text-right"><%= i %></th>
         <td class="break-word"><%= post.product %></td>
-        <td class="break-word"><%= post.date %></td>
+        <td class="break-word"><%= post.date.strftime("%Y/%m/%d") %></td>
         <td class="break-word"><%= post.start_time.strftime("%Y/%m/%d") %></td>
         <td class="text-nowrap">
-          <%= link_to post, class: "btn btn-primary" do %>
-            <i class="fas fa-envelope-open-text"></i> <span class="d-none d-md-inline"> 詳細</span>
-          <% end %>
           <%= link_to edit_post_path(post), class: "btn btn-success" do %>
             <i class="far fa-edit"></i> <span class="d-none d-md-inline"> 更新</span>
           <% end %>
