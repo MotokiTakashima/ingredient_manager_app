@@ -4,7 +4,6 @@ class PostsController < ApplicationController
 
   def index
     @posts = Post.order(id: :asc)
-    @post = Post.new
   end
 
   def new
