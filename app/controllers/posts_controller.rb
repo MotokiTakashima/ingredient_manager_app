@@ -13,9 +13,9 @@ class PostsController < ApplicationController
   def create
     @post = Post.new(post_params)
     if @post.save
-      redirect_to posts_path, notice: "投稿しました"
+      redirect_to posts_path, notice: "#{@post.product}を追加しました"
     else
-      flash.now[:alert] = "投稿に失敗しました"
+      flash.now[:alert] = "追加に失敗しました"
       render :new
     end
   end
@@ -25,7 +25,7 @@ class PostsController < ApplicationController
 
   def update
     if @post.update(post_params)
-      redirect_to posts_path, notice: "更新しました"
+      redirect_to posts_path, notice: "#{@post.product}を更新しました"
     else
       flash.now[:alert] = "更新に失敗しました"
       render :edit
@@ -34,7 +34,7 @@ class PostsController < ApplicationController
 
   def destroy
     @post.destroy!
-    redirect_to posts_path, alert: "削除しました"
+    redirect_to posts_path, alert: "#{@post.product}を削除しました"
   end
 
   private
