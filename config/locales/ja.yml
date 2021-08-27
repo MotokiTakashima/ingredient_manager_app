@@ -6,7 +6,7 @@ ja:
     attributes:
       post:
         product: タイトル
-        date: 購入日
+        purchase: 購入日
         start_time: 期限
     errors:
       messages:

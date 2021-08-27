@@ -1,10 +1,5 @@
 <h1 class="text-center">中身一覧</h1>
 <table class="table table-bordered table-striped mt-4">
-  <% if Post.where(date: Time.current) %>
-    <% @posts.each do |post| %>
-      <%= post.product %>
-    <% end %>
-  <% end %>
   <thead class="table-primary">
     <tr>
       <th scope="col">No.</th>
@@ -19,7 +14,7 @@
       <tr>
         <th scope="row" class="text-right"><%= i %></th>
         <td class="break-word"><%= post.product %></td>
-        <td class="break-word"><%= post.date.strftime("%Y/%m/%d") %></td>
+        <td class="break-word"><%= post.purchase.strftime("%Y/%m/%d") %></td>
         <td class="break-word"><%= post.start_time.strftime("%Y/%m/%d") %></td>
         <td class="text-nowrap">
           <%= link_to edit_post_path(post), class: "btn btn-success" do %>
