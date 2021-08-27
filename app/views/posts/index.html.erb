@@ -14,7 +14,7 @@
       <tr>
         <th scope="row" class="text-right"><%= i %></th>
         <td class="break-word"><%= post.product %></td>
-        <td class="break-word"><%= post.date.strftime("%Y/%m/%d") %></td>
+        <td class="break-word"><%= post.purchase.strftime("%Y/%m/%d") %></td>
         <td class="break-word"><%= post.start_time.strftime("%Y/%m/%d") %></td>
         <td class="text-nowrap">
           <%= link_to edit_post_path(post), class: "btn btn-success" do %>
