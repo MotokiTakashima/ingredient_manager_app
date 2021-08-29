@@ -17,7 +17,7 @@ ActiveRecord::Schema.define(version: 2021_08_05_144517) do
 
   create_table "posts", force: :cascade do |t|
     t.string "product"
-    t.date "purchase"
+    t.string "memo"
     t.date "start_time"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
