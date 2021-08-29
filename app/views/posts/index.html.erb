@@ -30,6 +30,7 @@
     <% end %>
   </tbody>
 </table>
+<%= link_to "新規投稿", new_post_path, class: "nav-item nav-link active" %>
 <div class="col-md-8">
   <%= month_calendar events: @posts do |date, posts| %>
     <%= date.day %>
