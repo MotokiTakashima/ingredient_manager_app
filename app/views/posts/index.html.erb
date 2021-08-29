@@ -4,9 +4,9 @@
     <tr>
       <th scope="col">No.</th>
       <th scope="col">商品</th>
-      <th scope="col">購入日</th>
       <th scope="col">期限</th>
       <th scope="col">残り</th>
+      <th scope="col">購入日</th>
       <th scope="col"></th>
     </tr>
   </thead>
@@ -15,9 +15,9 @@
       <tr>
         <th scope="row" class="text-right"><%= i %></th>
         <td class="break-word"><%= post.product %></td>
-        <td class="break-word"><%= post.purchase.strftime("%Y/%m/%d") %></td>
         <td class="break-word"><%= post.start_time.strftime("%Y/%m/%d") %></td>
         <td class="break-word">あと<%= (post.start_time - Date.today).to_i %>日</td>
+        <td class="break-word"><%= post.purchase.strftime("%Y/%m/%d") %></td>
         <td class="text-nowrap">
           <%= link_to edit_post_path(post), class: "btn btn-success" do %>
             <i class="far fa-edit"></i> <span class="d-none d-md-inline"> 更新</span>
