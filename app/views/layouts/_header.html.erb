@@ -12,7 +12,6 @@
         <%# ログイン時 %>
         <%= link_to "アカウント編集", edit_user_registration_path, class: "nav-item nav-link active" %>
         <%= link_to "ログアウト", destroy_user_session_path, class: "nav-item nav-link active", method: :delete, data: { confirm: "ログアウトしますか？" } %>
-        <%= "【ログイン中のアドレス】#{current_user.email}" %>
       <% else %>
         <%# 非ログイン時 %>
         <%= link_to "新規登録", new_user_registration_path, class: "nav-item nav-link active" %>
