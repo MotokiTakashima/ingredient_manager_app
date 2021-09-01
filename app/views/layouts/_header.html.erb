@@ -6,18 +6,22 @@
     <span class="navbar-toggler-icon"></span>
   </button>
   <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-    <div class="navbar-nav">
+    <ul class="navbar-nav">
       <%= link_to "投稿一覧", posts_path, class: "nav-item nav-link active" %>
-      <% if user_signed_in? %>
-        <%# ログイン時 %>
+    </ul>
+    <% if user_signed_in? %>
+      <%# ログイン時 %>
+      <ul class="navbar-nav ml-auto">
         <%= link_to "アカウント編集", edit_user_registration_path, class: "nav-item nav-link active" %>
         <%= link_to "ログアウト", destroy_user_session_path, class: "nav-item nav-link active", method: :delete, data: { confirm: "ログアウトしますか？" } %>
-      <% else %>
-        <%# 非ログイン時 %>
+      </ul>
+    <% else %>
+      <%# 非ログイン時 %>
+      <ul class="navbar-nav ml-auto">
         <%= link_to "新規登録", new_user_registration_path, class: "nav-item nav-link active" %>
         <%= link_to "ログイン", new_user_session_path, class: "nav-item nav-link active" %>
         <%= link_to "ゲストログイン（閲覧用）", users_guest_sign_in_path, method: :post, class: "nav-item nav-link active" %>
-      <% end %>
-    </div>
+      </ul>
+    <% end %>
   </div>
 </nav>
