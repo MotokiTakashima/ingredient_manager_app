@@ -18,9 +18,9 @@
         <td class="break-word"><%= post.start_time.strftime("%Y/%m/%d") %></td>
         <td class="break-word">
           <% if post.start_time - Date.today >= 0 %>
-            <p>あと <%= (post.start_time - Date.today).to_i%> 日</p>
+            <span>あと <%= (post.start_time - Date.today).to_i %> 日</span>
           <% else %>
-            <p><font color="red">期限が過ぎています</font></p>
+            <span class="alort">期限が過ぎています</span>
           <% end %></td>
         <td class="break-word"><%= post.memo %></td>
         <td class="text-nowrap">
