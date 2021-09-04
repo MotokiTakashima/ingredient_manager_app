@@ -1,2 +1,38 @@
-<h1>Memos#index</h1>
-<p>Find me in app/views/memos/index.html.erb</p>
+<h1>買い物リスト</h1>
+<table>
+  <thead>
+    <tr>
+      <th scope="col">No.</th>
+      <th scope="col">タイトル</th>
+      <th scope="col">備考</th>
+      <th scope="col"></th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @memos.each.with_index(1) do |memo, i| %>
+      <tr>
+        <th scope="row"><%= i %></th>
+        <td><%= memo.title %></td>
+        <td><%= memo.content %></td>
+        <td>
+          <%= link_to "編集", edit_memo_path(memo) %>
+          <%= link_to "削除", memo, method: :delete, data: { confirm: "削除しますか?" } %>
+        </td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+<h1>新規投稿</h1>
+<%= form_with model: @memo, local: true do |form| %>
+  <div>
+    <%= form.label :title, "タイトル" %>
+    <%= form.text_field :title %>
+  </div>
+  <div>
+    <%= form.label :content, "内容" %>
+    <%= form.text_field :content %>
+  </div>
+  <div>
+    <%= form.submit "送信" %>
+  </div>
+<% end %>
