@@ -6,9 +6,12 @@ class MemosController < ApplicationController
   end
 
   def new
+    @memo = Memo.new
   end
 
   def create
+    memo = Memo.create!(memo_params)
+    redirect_to memo
   end
 
   def edit
@@ -18,5 +21,11 @@ class MemosController < ApplicationController
   end
 
   def destroy
+  end
+
+  private
+
+  def memo_params
+    params.require(:memo).permit(:title, :content)
   end
 end
