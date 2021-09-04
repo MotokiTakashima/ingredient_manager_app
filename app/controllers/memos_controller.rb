@@ -1,8 +1,7 @@
 class MemosController < ApplicationController
   def index
-  end
-
-  def show
+    @memos = Memo.order(id: :asc)
+    @memo = Memo.new
   end
 
   def new
@@ -10,8 +9,8 @@ class MemosController < ApplicationController
   end
 
   def create
-    memo = Memo.create!(memo_params)
-    redirect_to memo
+    Memo.create(memo_params)
+    redirect_to memos_path
   end
 
   def edit
