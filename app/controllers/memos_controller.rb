@@ -13,7 +13,7 @@ class MemosController < ApplicationController
 
   def create
     Memo.create(memo_params)
-    redirect_to memos_path
+    redirect_to memos_path, notice: "追加しました"
   end
 
   def edit
@@ -21,12 +21,12 @@ class MemosController < ApplicationController
 
   def update
     @memo.update!(memo_params)
-    redirect_to memos_path
+    redirect_to memos_path, notice: "変更しました"
   end
 
   def destroy
     @memo.destroy!
-    redirect_to memos_path
+    redirect_to memos_path, alert: "削除しました"
   end
 
   private

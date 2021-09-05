@@ -15,7 +15,7 @@
         <td><%= memo.title %></td>
         <td><%= memo.content %></td>
         <td>
-          <%= link_to "編集", edit_memo_path(memo) %>
+          <%= link_to "変更", edit_memo_path(memo) %>
           <%= link_to "削除", memo, method: :delete, data: { confirm: "削除しますか?" } %>
         </td>
       </tr>
