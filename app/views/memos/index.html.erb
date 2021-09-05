@@ -15,7 +15,7 @@
         <td><%= memo.title %></td>
         <td><%= memo.content %></td>
         <td>
-          <%= link_to "編集", edit_memo_path(memo) %>
+          <%= link_to "変更", edit_memo_path(memo) %>
           <%= link_to "削除", memo, method: :delete, data: { confirm: "削除しますか?" } %>
         </td>
       </tr>
@@ -25,11 +25,11 @@
 <h3>新規投稿</h3>
 <%= form_with model: @memo, local: true do |form| %>
   <div>
-    <%= form.label :title, "タイトル" %>
+    <%= form.label :title %>
     <%= form.text_field :title %>
   </div>
   <div>
-    <%= form.label :content, "内容" %>
+    <%= form.label :content %>
     <%= form.text_field :content %>
   </div>
   <div>
