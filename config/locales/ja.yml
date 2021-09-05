@@ -8,6 +8,9 @@ ja:
         product: タイトル
         memo: 備考
         start_time: 期限
+      memo:
+        title: タイトル
+        content: 備考
     errors:
       messages:
         record_invalid: "バリデーションに失敗しました: %{errors}"
