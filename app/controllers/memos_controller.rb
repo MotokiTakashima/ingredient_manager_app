@@ -12,7 +12,7 @@ class MemosController < ApplicationController
   end
 
   def create
-    Memo.create(memo_params)
+    Memo.create!(memo_params)
     redirect_to memos_path, notice: "追加しました"
   end
 
