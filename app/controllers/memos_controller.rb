@@ -12,16 +12,25 @@ class MemosController < ApplicationController
   end
 
   def create
-    Memo.create!(memo_params)
-    redirect_to memos_path, notice: "追加しました"
+    @memo = Memo.new(memo_params)
+    if @memo.save
+      redirect_to @memo, notice: "追加しました"
+    else
+      flash.now[:alert] = "追加に失敗しました"
+      redirect_to memos_path
+    end
   end
 
   def edit
   end
 
   def update
-    @memo.update!(memo_params)
-    redirect_to memos_path, notice: "変更しました"
+    if @memo.update(memo_params)
+      redirect_to memos_path, notice: "変更しました"
+    else
+      flash.now[:alert] = "変更に失敗しました"
+      render :edit
+    end
   end
 
   def destroy
