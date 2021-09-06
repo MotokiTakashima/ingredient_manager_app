@@ -18,7 +18,7 @@
           <% if post.start_time - Date.today > 0 %>
             <span>あと <%= (post.start_time - Date.today).to_i %> 日</span>
           <% elsif post.start_time - Date.today == 0 %>
-            <span class="alort">今日までです</span>
+            <span class="warning">今日までです</span>
           <% else %>
             <span class="alort">期限が過ぎています</span>
           <% end %></td>
