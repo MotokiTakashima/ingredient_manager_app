@@ -2,16 +2,14 @@
 <table>
   <thead>
     <tr>
-      <th scope="col">No.</th>
       <th scope="col">タイトル</th>
       <th scope="col">備考</th>
       <th scope="col"></th>
     </tr>
   </thead>
   <tbody>
-    <% @memos.each.with_index(1) do |memo, i| %>
+    <% @memos.each do |memo| %>
       <tr>
-        <th scope="row"><%= i %></th>
         <td><%= memo.title %></td>
         <td><%= memo.content %></td>
         <td>
