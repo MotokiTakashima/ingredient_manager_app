@@ -1,8 +1,22 @@
-<h1>買い物リスト</h1>
-<table>
-  <thead>
+<h3>新規投稿</h3>
+<%= form_with model: @memo, local: true do |form| %>
+  <div>
+    <%= form.label :title %>
+    <%= form.text_field :title %>
+  </div>
+  <div>
+    <%= form.label :content %>
+    <%= form.text_field :content %>
+  </div>
+  <div>
+    <%= form.submit "送信" %>
+  </div>
+<% end %>
+<h1 class="text-center">買い物リスト</h1>
+<table class="table mt-4">
+  <thead class="table-primary">
     <tr>
-      <th scope="col">タイトル</th>
+      <th scope="col">商品</th>
       <th scope="col">備考</th>
       <th scope="col"></th>
     </tr>
@@ -20,17 +34,3 @@
     <% end %>
   </tbody>
 </table>
-<h3>新規投稿</h3>
-<%= form_with model: @memo, local: true do |form| %>
-  <div>
-    <%= form.label :title %>
-    <%= form.text_field :title %>
-  </div>
-  <div>
-    <%= form.label :content %>
-    <%= form.text_field :content %>
-  </div>
-  <div>
-    <%= form.submit "送信" %>
-  </div>
-<% end %>
