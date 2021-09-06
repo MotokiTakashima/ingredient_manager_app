@@ -2,7 +2,6 @@
 <table class="table table-bordered table-striped mt-4">
   <thead class="table-primary">
     <tr>
-      <th scope="col">No.</th>
       <th scope="col">商品</th>
       <th scope="col">期限</th>
       <th scope="col">残り日数</th>
@@ -11,9 +10,8 @@
     </tr>
   </thead>
   <tbody>
-    <% @posts.each.with_index(1) do |post, i| %>
+    <% @posts.each do |post| %>
       <tr>
-        <th scope="row" class="text-right"><%= i %></th>
         <td class="break-word"><%= link_to "#{post.product}", edit_post_path(post) %></td>
         <td class="break-word"><%= post.start_time.strftime("%Y/%m/%d") %></td>
         <td class="break-word">
