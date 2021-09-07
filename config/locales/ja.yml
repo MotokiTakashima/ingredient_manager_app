@@ -9,7 +9,7 @@ ja:
         memo: 備考
         start_time: 期限
       memo:
-        title: タイトル
+        title: 商品
         content: 備考
     errors:
       messages:
