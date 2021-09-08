@@ -14,7 +14,7 @@ class MemosController < ApplicationController
   def create
     @memo = Memo.new(memo_params)
     if @memo.save
-      redirect_to @memo, notice: "追加しました"
+      redirect_to memos_path, notice: "追加しました"
     else
       flash.now[:alert] = "追加に失敗しました"
       redirect_to memos_path
