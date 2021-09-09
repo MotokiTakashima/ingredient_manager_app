@@ -26,9 +26,13 @@
       <tr>
         <td><%= memo.title %></td>
         <td><%= memo.content %></td>
-        <td>
-          <%= link_to "変更", edit_memo_path(memo) %>
-          <%= link_to "削除", memo, method: :delete %>
+        <td class="botton">
+          <%= link_to edit_memo_path(memo), class: "btn btn-success" do %>
+            <i class="far fa-edit"></i> <span class="d-none d-md-inline"> 編集</span>
+          <% end %>
+          <%= link_to memo, method: :delete, class: "btn btn-danger" do %>
+            <i class="far fa-trash-alt"></i> <span class="d-none d-md-inline"> 削除</span>
+          <% end %>
         </td>
       </tr>
     <% end %>
