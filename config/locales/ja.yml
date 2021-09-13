@@ -8,6 +8,7 @@ ja:
         product: タイトル
         memo: 備考
         start_time: 期限
+        genre: ジャンル
       memo:
         title: 商品
         content: 備考
