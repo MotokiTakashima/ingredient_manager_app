@@ -26,6 +26,7 @@ ActiveRecord::Schema.define(version: 2021_09_04_085608) do
     t.string "product"
     t.string "memo"
     t.date "start_time"
+    t.integer "genre"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end

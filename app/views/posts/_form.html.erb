@@ -1,6 +1,11 @@
 <%= render "layouts/error_messages" %>
 <%= form_with model: @post, local: true do |form| %>
   <form>
+    <div>
+      <div class="form-tag"><%= form.label :genre %></div>
+      <%= form.select :genre, Post.genres.keys %>
+    </div>
+    <br>
     <div class="product">
       <div class="form-tag"><%= form.label :product %></div>
       <%= form.text_field :product %>
