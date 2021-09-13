@@ -4,6 +4,7 @@ class CreatePosts < ActiveRecord::Migration[6.1]
       t.string :product
       t.string :memo
       t.date :start_time
+      t.integer :genre
 
       t.timestamps
     end
