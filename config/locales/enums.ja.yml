@@ -1,0 +1,7 @@
+ja:
+  enums:
+    post:
+      genre:
+        others: "その他"
+        vegetable: "野菜"
+        meat: "肉類"
