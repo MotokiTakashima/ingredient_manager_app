@@ -34,6 +34,7 @@ gem 'devise-i18n'
 gem 'rails-i18n', '~> 6.0'
 
 # カレンダー機能
+gem 'enum_help'
 gem 'simple_calendar', '~> 2.0'
 
 group :development, :test do
