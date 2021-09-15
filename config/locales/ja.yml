@@ -5,7 +5,7 @@ ja:
       post: メッセージ
     attributes:
       post:
-        product: タイトル
+        product: 商品名
         memo: 備考
         start_time: 期限
         genre: ジャンル
