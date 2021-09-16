@@ -1,3 +1,31 @@
 .botton {
   text-align: right;
 }
+
+.split {
+  display: table;
+  width: 100%;
+}
+
+.split-item {
+  display: table-cell;
+  padding: 30px;
+  width: 30%;
+}
+
+.split-left {
+  float:left;
+  height: 50%;
+  position: relative;
+}
+
+.split-left__inner {
+  height: 50px;
+  position: fixed;
+  width: 30%;
+}
+
+.split-right__inner {
+  height: 8000px;
+  width: 100%;
+}
