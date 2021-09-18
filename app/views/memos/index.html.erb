@@ -33,7 +33,7 @@
             <td><%= link_to "#{memo.title}", edit_memo_path(memo) %></td>
             <td><%= memo.content %></td>
             <td class="botton">
-              <%= link_to memo, method: :delete, class: "btn btn-danger" do %>
+              <%= link_to memo, method: :delete, class: "btn btn-outline-danger" do %>
                 <i class="far fa-trash-alt"></i> <span class="d-none d-md-inline"> 削除</span>
               <% end %>
             </td>
