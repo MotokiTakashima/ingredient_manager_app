@@ -4,6 +4,7 @@ Rails.application.routes.draw do
        registrations: "users/registrations",
        passwords: "users/passwords"
   }
+  get "/index/:genre", to: "items#index"
   resources :posts
   resources :memos
   devise_scope :user do
