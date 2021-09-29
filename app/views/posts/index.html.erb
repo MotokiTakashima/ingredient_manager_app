@@ -29,7 +29,9 @@
     <% @posts.each do |post| %>
       <tr>
         <td class="break-word"><%= link_to "#{post.product}", edit_post_path(post) %></td>
-        <td class="break-word"><%= post.genre_i18n %></td>
+        <% post.genres.each do |genre| %>
+          <td class="break-word"><%= genre.name %></td>
+        <% end %>
         <td class="break-word"><%= post.start_time.strftime("%Y/%m/%d") %></td>
         <td class="break-word">
           <% if post.start_time - Date.today > 0 %>
