@@ -2,6 +2,19 @@
 <%= form_with model: @post, local: true do |form| %>
   <form>
     <div>
+      <div class="check_box">
+        <%= form.collection_check_boxes(:genre_ids, Genre.all, :id, :name) do |genre| %>
+          <div class='form-check'>
+            <%= genre.label do %>
+              <%= genre.check_box %>
+              <%= genre.text %>
+            <% end %>
+          </div>
+        <% end %>
+      </div>
+    </div>
+    <br>
+    <div>
       <div class="form-tag"><%= form.label :genre %></div>
       <%= form.select :genre, Post.genres_i18n.invert %>
     </div>
