@@ -45,6 +45,6 @@ class PostsController < ApplicationController
   end
 
   def post_params
-    params.require(:post).permit(:product, :memo, :start_time, :genre, genre_ids: [])
+    params.require(:post).permit(:product, :memo, :start_time, genre_ids: [])
   end
 end

@@ -1,19 +1,4 @@
 <h1 class="text-center">在庫一覧</h1>
-<span class="mgr-10">
-  <%= link_to posts_path(genre: "vegetable"), class: "btn btn-success" do %>
-    <i class="fas fa-solid fa-carrot"></i> <span class="d-none d-md-inline"> 野菜</span>
-  <% end %>
-</span>
-<span class="mgr-10">
-  <%= link_to posts_path(genre: "meat"), class: "btn btn-danger" do %>
-    <i class="fas fa-solid fa-drumstick-bite"></i><span class="d-none d-md-inline"> 肉類</span>
-  <% end %>
-</span>
-<span class="mgr-10">
-  <%= link_to posts_path(genre: "others"), class: "btn btn-info" do %>
-    <i class="fas fa-solid fa-box-open"></i> <span class="d-none d-md-inline"> その他</span>
-  <% end %>
-</span>
 <%= form_tag posts_path, method: :get, class: 'boards__searchForm' do %>
   <% @genres.each do |genre| %>
     <div class="tag-box">

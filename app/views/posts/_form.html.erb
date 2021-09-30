@@ -14,11 +14,6 @@
       </div>
     </div>
     <br>
-    <div>
-      <div class="form-tag"><%= form.label :genre %></div>
-      <%= form.select :genre, Post.genres_i18n.invert %>
-    </div>
-    <br>
     <div class="product">
       <div class="form-tag"><%= form.label :product %></div>
       <%= form.text_field :product %>
