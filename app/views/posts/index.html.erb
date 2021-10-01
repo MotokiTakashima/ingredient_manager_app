@@ -1,11 +1,11 @@
 <h1 class="text-center">在庫一覧</h1>
 <%= form_tag posts_path, method: :get, class: 'boards__searchForm' do %>
   <% @genres.each do |genre| %>
-    <div class="tag-box">
+    <div class="btn btn-outline-primary">
       <%= link_to genre.name, posts_path(name: genre.id) %>
     </div>
   <% end %>
-  <div class="tag-box">
+  <div class="btn btn-outline-primary">
     <%= link_to "全て商品", posts_path %>
   </div>
 <% end %>
