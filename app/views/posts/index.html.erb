@@ -1,23 +1,17 @@
 <h1 class="text-center">在庫一覧</h1>
-<span class="mgr-10">
-  <%= link_to posts_path(genre: "vegetable"), class: "btn btn-success" do %>
-    <i class="fas fa-solid fa-carrot"></i> <span class="d-none d-md-inline"> 野菜</span>
+<%= link_to new_post_path, class: "btn btn-primary mb5" do %>
+  <i class="fas fa-pen-fancy"></i> <span class="d-none d-md-inline"> 商品追加</span>
+<% end %>
+<%= form_tag posts_path, method: :get, class: 'boards__searchForm' do %>
+  <% @genres.each do |genre| %>
+    <%= link_to genre.name, posts_path(name: genre.id), class: "btn btn-outline-primary" %>
   <% end %>
-</span>
-<span class="mgr-10">
-  <%= link_to posts_path(genre: "meat"), class: "btn btn-danger" do %>
-    <i class="fas fa-solid fa-drumstick-bite"></i><span class="d-none d-md-inline"> 肉類</span>
-  <% end %>
-</span>
-<span class="mgr-10">
-  <%= link_to posts_path(genre: "others"), class: "btn btn-info" do %>
-    <i class="fas fa-solid fa-box-open"></i> <span class="d-none d-md-inline"> その他</span>
-  <% end %>
-</span>
+  <%= link_to "全て商品", posts_path, class: "btn btn-outline-primary"  %>
+<% end %>
 <table class="table table-bordered table-striped mt-4">
   <thead class="table-primary">
     <tr>
-      <th scope="col">商品</th>
+      <th scope="col">商品.更新</th>
       <th scope="col">ジャンル</th>
       <th scope="col">期限</th>
       <th scope="col">残り日数</th>
@@ -51,11 +45,8 @@
     <% end %>
   </tbody>
 </table>
-<%= link_to new_post_path, class: "btn btn-primary mb5" do %>
-  <i class="fas fa-pen-fancy"></i> <span class="d-none d-md-inline"> 商品追加</span>
-<% end %>
 <h2>期限カレンダー</h2>
-<div class="col-md-8">
+<div class="col-md-12">
   <%= month_calendar events: @posts do |date, posts| %>
     <%= date.day %>
     <% posts.each do |post| %>

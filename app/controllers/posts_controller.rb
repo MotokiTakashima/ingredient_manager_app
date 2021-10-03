@@ -3,7 +3,8 @@ class PostsController < ApplicationController
   before_action :set_post, only: %i[edit update destroy]
 
   def index
-    @posts = Post.order(id: :asc)
+    @genres = Genre.all
+    @posts = params[:name].present? ? Genre.find(params[:name]).posts : Post.all
   end
 
   def new
@@ -44,6 +45,6 @@ class PostsController < ApplicationController
   end
 
   def post_params
-    params.require(:post).permit(:product, :memo, :start_time, :genre, genre_ids: [])
+    params.require(:post).permit(:product, :memo, :start_time, genre_ids: [])
   end
 end
