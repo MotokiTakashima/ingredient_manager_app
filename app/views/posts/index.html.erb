@@ -1,6 +1,12 @@
 <h1 class="text-center">在庫一覧</h1>
-<%= link_to new_post_path, class: "btn btn-primary" do %>
+<%= link_to new_post_path, class: "btn btn-primary mb5" do %>
   <i class="fas fa-pen-fancy"></i> <span class="d-none d-md-inline"> 商品追加</span>
+<% end %>
+<%= form_tag posts_path, method: :get, class: 'boards__searchForm' do %>
+  <% @genres.each do |genre| %>
+    <%= link_to genre.name, posts_path(name: genre.id), class: "btn btn-outline-primary" %>
+  <% end %>
+  <%= link_to "全て商品", posts_path, class: "btn btn-outline-primary"  %>
 <% end %>
 <table class="table table-bordered table-striped mt-4">
   <thead class="table-primary">
@@ -39,12 +45,6 @@
     <% end %>
   </tbody>
 </table>
-<%= form_tag posts_path, method: :get, class: 'boards__searchForm mb5' do %>
-  <% @genres.each do |genre| %>
-    <%= link_to genre.name, posts_path(name: genre.id), class: "btn btn-outline-primary" %>
-  <% end %>
-  <%= link_to "全て商品", posts_path, class: "btn btn-outline-primary"  %>
-<% end %>
 <h2>期限カレンダー</h2>
 <div class="col-md-8">
   <%= month_calendar events: @posts do |date, posts| %>
