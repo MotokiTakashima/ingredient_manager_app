@@ -1,6 +1,7 @@
 class PostsController < ApplicationController
 
   before_action :set_post, only: %i[edit update destroy]
+  before_action :move_to_signed_in, except: [:top]
 
   def index
     @genres = Genre.all
@@ -46,5 +47,12 @@ class PostsController < ApplicationController
 
   def post_params
     params.require(:post).permit(:product, :memo, :start_time, genre_ids: [])
+  end
+
+  def move_to_signed_in
+    unless user_signed_in?
+      #サインインしていないユーザーはログインページが表示される
+      redirect_to "/users/sign_in"
+    end
   end
 end

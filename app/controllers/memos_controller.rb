@@ -1,6 +1,7 @@
 class MemosController < ApplicationController
 
   before_action :set_memo, only: %i[edit update destroy]
+  before_action :move_to_signed_in, except: [:top]
 
   def index
     @memos = Memo.order(id: :asc)
@@ -46,5 +47,12 @@ class MemosController < ApplicationController
 
   def memo_params
     params.require(:memo).permit(:title, :content)
+  end
+
+  def move_to_signed_in
+    unless user_signed_in?
+      #サインインしていないユーザーはログインページが表示される
+      redirect_to "/users/sign_in"
+    end
   end
 end
