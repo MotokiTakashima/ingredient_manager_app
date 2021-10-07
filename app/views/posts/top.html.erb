@@ -6,6 +6,6 @@
   <%= link_to "レシピを検索", posts_path, class: "btn btn-info" %>
 <% else %>
   <%# 非ログイン時 %>
-  <%= link_to "ログイン", new_user_session_path, class: "btn btn-info" %>
-  <%= link_to "ゲストログイン（閲覧用）", users_guest_sign_in_path, method: :post, class: "btn btn-success" %>
+  <%= link_to "ログイン", new_user_session_path, class: 'btn btn-outline-info rounded-pill' %>
+  <%= link_to "ゲストログイン（閲覧用）", users_guest_sign_in_path, method: :post, class: 'btn btn-outline-success rounded-pill' %>
 <% end %>
