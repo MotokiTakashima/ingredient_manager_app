@@ -1,4 +1,4 @@
-<div class="top" >
+<div class="main-container" >
   <h2 style="text-align:center">あなたの冷蔵庫、見守ります</h2>
   <% if user_signed_in? %>
     <%# ログイン時 %>
@@ -10,8 +10,4 @@
     <%= link_to "ログイン", new_user_session_path, class: 'btn btn-outline-info rounded-pill' %>
     <%= link_to "ゲストログイン（閲覧用）", users_guest_sign_in_path, method: :post, class: 'btn btn-outline-success rounded-pill' %>
   <% end %>
-</div>
-<div class="main-container">
-  <h1>This is my Portfolio Site</h1>
-  <p>これは私のポートフォリオサイトです</p>
 </div>
