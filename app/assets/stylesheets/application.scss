@@ -33,8 +33,8 @@
 // 共通
 .base-container {
   @extend .container-fluid;
-  max-width: var(--breakpoint-lg);
   padding: 30px 15px;
+  background-color: rgb(219, 238, 245);
 }
 
 body {
