@@ -1,60 +1,62 @@
-<h1 class="text-center">在庫一覧</h1>
-<%= link_to new_post_path, class: "btn btn-primary mb5 btn-lg" do %>
-  <i class="fas fa-pen-fancy"></i> <span class="d-none d-md-inline"> 商品追加</span>
-<% end %>
-<%= form_tag posts_path, method: :get, class: 'boards__searchForm' do %>
-  <% @genres.each do |genre| %>
-    <%= link_to genre.name, posts_path(name: genre.id), class: "btn btn-outline-primary" %>
+<div class="main-page">
+  <h1 class="text-center">在庫一覧</h1>
+  <%= link_to new_post_path, class: "btn btn-primary mb5 btn-lg" do %>
+    <i class="fas fa-pen-fancy"></i> <span class="d-none d-md-inline"> 商品追加</span>
   <% end %>
-  <%= link_to "全て商品", posts_path, class: "btn btn-outline-primary"  %>
-<% end %>
-<table class="table table-bordered table-striped mt-4">
-  <thead class="table-primary">
-    <tr>
-      <th scope="col">商品.更新</th>
-      <th scope="col">ジャンル</th>
-      <th scope="col">期限</th>
-      <th scope="col">残り日数</th>
-      <th scope="col">備考</th>
-      <th scope="col"></th>
-    </tr>
-  </thead>
-  <tbody>
-    <% @posts.each do |post| %>
+  <%= form_tag posts_path, method: :get, class: 'boards__searchForm' do %>
+    <% @genres.each do |genre| %>
+      <%= link_to genre.name, posts_path(name: genre.id), class: "btn btn-outline-primary" %>
+    <% end %>
+    <%= link_to "全て商品", posts_path, class: "btn btn-outline-primary"  %>
+  <% end %>
+  <table class="table table-bordered table-striped mt-4">
+    <thead class="table-primary">
       <tr>
-        <td class="break-word"><%= link_to "#{post.product}", edit_post_path(post) %></td>
-        <% post.genres.each do |genre| %>
-          <td class="break-word"><%= genre.name %></td>
-        <% end %>
-        <td class="break-word"><%= post.start_time.strftime("%Y/%m/%d") %></td>
-        <td class="break-word">
-          <% if post.start_time - Date.today > 0 %>
-            <span>あと <%= (post.start_time - Date.today).to_i %> 日</span>
-          <% elsif post.start_time - Date.today == 0 %>
-            <span class="warning">今日までです</span>
-          <% else %>
-            <span class="alort">期限が過ぎています</span>
-          <% end %></td>
-        <td class="break-word"><%= post.memo %></td>
-        <td class="text-nowrap">
-          <%= link_to post, method: :delete, data: { confirm: "削除しますか?" }, class: "btn btn-outline-danger" do %>
-            <i class="far fa-trash-alt"></i> <span class="d-none d-md-inline"> 削除</span>
-          <% end %>
-        </td>
+        <th scope="col">商品.更新</th>
+        <th scope="col">ジャンル</th>
+        <th scope="col">期限</th>
+        <th scope="col">残り日数</th>
+        <th scope="col">備考</th>
+        <th scope="col"></th>
       </tr>
+    </thead>
+    <tbody>
+      <% @posts.each do |post| %>
+        <tr>
+          <td class="break-word"><%= link_to "#{post.product}", edit_post_path(post) %></td>
+          <% post.genres.each do |genre| %>
+            <td class="break-word"><%= genre.name %></td>
+          <% end %>
+          <td class="break-word"><%= post.start_time.strftime("%Y/%m/%d") %></td>
+          <td class="break-word">
+            <% if post.start_time - Date.today > 0 %>
+              <span>あと <%= (post.start_time - Date.today).to_i %> 日</span>
+            <% elsif post.start_time - Date.today == 0 %>
+              <span class="warning">今日までです</span>
+            <% else %>
+              <span class="alort">期限が過ぎています</span>
+            <% end %></td>
+          <td class="break-word"><%= post.memo %></td>
+          <td class="text-nowrap">
+            <%= link_to post, method: :delete, data: { confirm: "削除しますか?" }, class: "btn btn-outline-danger" do %>
+              <i class="far fa-trash-alt"></i> <span class="d-none d-md-inline"> 削除</span>
+            <% end %>
+          </td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+  <h2>期限カレンダー</h2>
+  <div class="col-md-12">
+    <%= month_calendar events: @posts do |date, posts| %>
+      <%= date.day %>
+      <% posts.each do |post| %>
+        <div>
+          <%= link_to post.product, post %>
+        </div>
+      <% end %>
     <% end %>
-  </tbody>
-</table>
-<h2>期限カレンダー</h2>
-<div class="col-md-12">
-  <%= month_calendar events: @posts do |date, posts| %>
-    <%= date.day %>
-    <% posts.each do |post| %>
-      <div>
-        <%= link_to post.product, post %>
-      </div>
-    <% end %>
-  <% end %>
+  </div>
 </div>
 </div>
 </div>
