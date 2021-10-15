@@ -22,12 +22,28 @@ padding-left: 0.3rem;
 text-decoration: none;
 color: white;
 }
-.main-container {
-background-image: image-url("brooke-cagle-TiTU0k1E0UE-unsplash.jpg");
-height: 600px;
-width: 100%;
-background-size: cover;
-}
 .main-page {
   padding: 30px 30px;
+}
+
+/* トップページ */
+.main-container {
+  background-image: image-url("brooke-cagle-TiTU0k1E0UE-unsplash.jpg");
+  height: 600px;
+  width: 100%;
+  background-size: cover;
+  position: relative;
+}
+
+.main-container h2 {
+  position:absolute;
+  top: 80px;
+  left: 650px;
+  color: rgb(255, 255, 255);
+}
+
+.btn-container {
+  position: absolute;
+  right: 10px;
+  bottom: 20px;
 }
