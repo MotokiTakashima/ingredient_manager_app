@@ -23,8 +23,11 @@ text-decoration: none;
 color: white;
 }
 .main-container {
-background-image: url("<%= asset_path('brooke-cagle-TiTU0k1E0UE-unsplash.jpg') %>");
+background-image: image-url("brooke-cagle-TiTU0k1E0UE-unsplash.jpg");
 height: 600px;
-max-width: 100%;
+width: 100%;
 background-size: cover;
+}
+.main-page {
+  padding: 30px 30px;
 }

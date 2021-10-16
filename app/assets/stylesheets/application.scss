@@ -31,11 +31,6 @@
   }
 }
 // 共通
-.base-container {
-  @extend .container-fluid;
-  padding: 30px 15px;
-  background-color: rgb(219, 238, 245);
-}
 
 body {
   padding-top: 56px;
