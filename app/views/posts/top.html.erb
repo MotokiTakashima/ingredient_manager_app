@@ -18,3 +18,130 @@
     <% end %>
   </div>
 </div>
+<div>
+  <section class="contents">
+    <div class="description" style="text-align:center">
+      <h3>アプリ説明</h3>
+      <p>
+        目標を立てて、楽しくエクササイズの<br>
+        積み上げを継続できるSNS型記録サービスです。
+      </p>
+    </div>
+  </section>
+</div>
+<div class="container-fluid py-5 mw-md">
+  <section>
+    <div class="row featurette">
+      <div class="col-md-6">
+        <h3 class="featurette-heading">
+          <span class="text-muted">
+            事前に<br>
+            エクササイズを登録
+          </span>
+        </h3>
+        <p>
+          継続したいエクササイズを登録した後は、
+          投稿時に選択するだけ。<br>
+          毎日、簡単に積み上げ投稿ができます。
+        </p>
+      </div>
+      <div class="col-md-6">
+        <img class="featurette-image img-fluid" src="/assets/undraw_exercise_registration.png" alt="">
+      </div>
+    </div>
+  </section>
+  <section>
+    <div class="row featurette">
+      <div class="col-md-6 order-md-2">
+        <h2 class="featurette-heading">
+          <span class="text-muted">
+            ランキング機能
+          </span>
+        </h2>
+        <p>
+          レベルが上位３名になると、ランキングに<br>
+          ユーザー名とレベルが載ります。<br>
+          ランキングに載ることで、モチベーション
+          維持をサポート。
+        </p>
+      </div>
+      <div class="col-md-6 order-md-1">
+        <img class="featurette-image img-fluid" src="/assets/undraw_ranking.png" alt="">
+      </div>
+    </div>
+  </section>
+  <section>
+    <div class="row featurette">
+      <div class="col-md-6">
+        <h2 class="featurette-heading">
+          <span class="text-muted">
+            フォロー機能
+          </span>
+        </h2>
+        <p>
+          ｢誰かにフォローされる喜び｣をユーザーにも味わってもらい、
+          エクササイズに取り組む際のモチベーションアップへ。
+        </p>
+      </div>
+      <div class="col-md-6">
+        <img class="featurette-image img-fluid" src="/assets/undraw_Follows.png" alt="">
+      </div>
+    </div>
+  </section>
+</div>
+<div>
+  <section id="pricing" class="pricing section-bg">
+    <div class="container">
+      <div class="section-title">
+        <p class="title">その他、継続をサポートする仕組み</div>
+        <div class="row">
+          <div class="col-lg-4 col-md-6">
+            <div class="box">
+              <h4>いいね機能</h4>
+              <p>
+                毎日の積み上げ投稿に対して、いいねを
+                押して、みんなでモチベーションを高めあうことができます。
+              </p>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6 mt-4 mt-md-0">
+            <div class="box">
+              <h4>Lvアップ機能</h4>
+              <p>
+                エクササイズの合計時間で、レベルが上がります。
+                レベルが高いほど、エクササイズを積み上げている証明になります。</p>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6 mt-4 mt-lg-0">
+            <div class="box">
+              <h4>目標設定機能</h4>
+              <p>
+                マイページで、目標を設定することができます。
+                目標を宣言することで、やる気アップにつながります。
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
+<div>
+  <section >
+    <div class="row justify-content-center">
+      <div class="col-lg-6 d-flex flex-column">
+        <h5 class="title"><img class="logo" src="/assets/logo.png" style="vertical-align:bottom;">をはじめよう!</h5>
+        <p class="text-center">登録は1分で完了します</p>
+        <div>
+          <div class="text-center text-lg-start">
+            <%= link_to "今すぐはじめる", new_user_registration_path, class: 'btn btn-outline-dark rounded-pill' %>
+            <%= link_to "ゲストログイン", users_guest_sign_in_path, method: :post, class: 'btn btn-outline-danger rounded-pill' %>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
+© 2021 GitHub, Inc.
+Terms
+Privacy
