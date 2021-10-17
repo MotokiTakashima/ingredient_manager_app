@@ -2,32 +2,62 @@ th,
 td {
 vertical-align: middle !important;
 }
+
 span.alort {
 color: red;
 }
+
 span.warning {
 color:#de8500;
 }
+
 span.near_deadline {
 color: #de8500;
 }
+
 .mb5 {
 margin-bottom: 1em;
 }
+
 .mgr-10 {
 padding-right: 0.3rem;
 padding-left: 0.3rem;
 }
+
 .botton {
 text-decoration: none;
 color: white;
 }
-.main-container {
-background-image: image-url("brooke-cagle-TiTU0k1E0UE-unsplash.jpg");
-height: 600px;
-width: 100%;
-background-size: cover;
-}
+
 .main-page {
   padding: 30px 30px;
+}
+
+/* トップページ */
+.main-container {
+  background-image: image-url("brooke-cagle-TiTU0k1E0UE-unsplash.jpg");
+  height: 600px;
+  width: 100%;
+  background-size: cover;
+  position: relative;
+}
+
+.main-container h2 {
+  position:absolute;
+  top: 70px;
+  left: 650px;
+  color: rgb(255, 255, 255);
+}
+.main-container p {
+  position: absolute;
+  top: 120px;
+  left: 650px;
+  color: rgb(255, 255, 255);
+  size: 10px;
+}
+
+.btn-container {
+  position: absolute;
+  right: 50px;
+  bottom: 20px;
 }
