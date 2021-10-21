@@ -5,6 +5,7 @@ Rails.application.routes.draw do
        passwords: "users/passwords"
   }
   get "/index/:genre", to: "items#index"
+  get "search" => "youtube#search"
   resources :posts
   resources :memos
   devise_scope :user do
