@@ -1,10 +1,11 @@
-<h1>レシピ検索</h1>
-<br>
-<div class="search-form">
-  <%= form_tag(youtube_index_path, method: :get) do %>
-    <%= text_field_tag :search, "" %>
-    <%= submit_tag 'search' %>
-  <% end %>
+<div class="main-page">
+  <h1 class="text-center">レシピ検索</h1>
+  <div class="search-form">
+    <%= form_tag(youtube_index_path, method: :get) do %>
+      <%= text_field_tag :search, "" %>
+      <%= submit_tag '検索' %>
+    <% end %>
+  </div>
 </div>
 <% @youtube_data.items.each do |item| %>
   <% @snippet = item.snippet %>
