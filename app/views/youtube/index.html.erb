@@ -10,8 +10,8 @@
   <% @youtube_data.items.each do |item| %>
     <% @snippet = item.snippet %>
     <% @video_id = item.id.video_id %>
-    <h2><%= @snippet.title %></h2>
-    <h3><%= @snippet.published_at %><%= @snippet.channel_title %></h3>
+    <h2>タイトル：<%= @snippet.title %></h2>
+    <h3>チャンネル名：<%= @snippet.channel_title %></h3>
     <div><iframe width="560" height="315" src="https://www.youtube.com/embed/<%= @video_id %>" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
   <% end %>
 </div>
