@@ -1,15 +1,17 @@
-<h1>レシピ検索</h1>
-<br>
-<div class="search-form">
-  <%= form_tag(youtube_index_path, method: :get) do %>
-    <%= text_field_tag :search, "" %>
-    <%= submit_tag 'search' %>
+<div class="main-page">
+  <h1 class="text-center">レシピ検索</h1>
+  <div class="search-form">
+    <%= form_tag(youtube_index_path, method: :get) do %>
+      <%= text_field_tag :search, "" %>
+      <%= submit_tag '検索' %>
+    <% end %>
+  </div>
+  <br>
+  <% @youtube_data.items.each do |item| %>
+    <% @snippet = item.snippet %>
+    <% @video_id = item.id.video_id %>
+    <h2>タイトル：<%= @snippet.title %></h2>
+    <h3>チャンネル名：<%= @snippet.channel_title %></h3>
+    <div><iframe width="560" height="315" src="https://www.youtube.com/embed/<%= @video_id %>" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
   <% end %>
 </div>
-<% @youtube_data.items.each do |item| %>
-  <% @snippet = item.snippet %>
-  <% @video_id = item.id.video_id %>
-  <h2><%= @snippet.title %></h2>
-  <h3><%= @snippet.published_at %><%= @snippet.channel_title %></h3>
-  <div><iframe width="560" height="315" src="https://www.youtube.com/embed/<%= @video_id %>" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
-<% end %>
