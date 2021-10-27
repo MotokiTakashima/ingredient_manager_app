@@ -54,3 +54,17 @@ body {
 .alert-alert {
   @extend .alert-danger;
 }
+
+.card-box {
+  margin-bottom: 50px;
+  padding-right: 15px;
+  padding-left: 15px;
+}
+
+.card {
+  height: auto;
+}
+
+img {
+  max-width: 100%;
+}
