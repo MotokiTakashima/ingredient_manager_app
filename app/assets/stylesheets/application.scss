@@ -32,6 +32,12 @@
 }
 // 共通
 
+.form {
+  @extend .container-fluid;
+  max-width: var(--breakpoint-lg);
+  padding: 30px 15px;
+}
+
 body {
   padding-top: 56px;
 }
@@ -55,6 +61,8 @@ body {
   @extend .alert-danger;
 }
 
+//検索ページ
+
 .card-box {
   margin-bottom: 50px;
   padding-right: 15px;
@@ -67,4 +75,8 @@ body {
 
 img {
   max-width: 100%;
+}
+
+.search-form {
+  padding-inline: red;
 }
