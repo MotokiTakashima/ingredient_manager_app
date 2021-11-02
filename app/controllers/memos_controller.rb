@@ -8,10 +8,6 @@ class MemosController < ApplicationController
     @memo = Memo.new
   end
 
-  def new
-    @memo = Memo.new
-  end
-
   def create
     @memo = Memo.new(memo_params)
     if @memo.save
