@@ -4,7 +4,7 @@ class MemosController < ApplicationController
   before_action :move_to_signed_in, except: [:top]
 
   def index
-    @memos = Memo.order(id: :asc)
+    @memos = Memo.where(user_id: current_user.id)
     @memo = Memo.new
   end
 
@@ -46,7 +46,7 @@ class MemosController < ApplicationController
   end
 
   def memo_params
-    params.require(:memo).permit(:title, :content)
+    params.require(:memo).permit(:title, :content).merge(user_id: current_user.id)
   end
 
   def move_to_signed_in
