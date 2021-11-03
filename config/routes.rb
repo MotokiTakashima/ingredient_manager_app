@@ -6,6 +6,7 @@ Rails.application.routes.draw do
   }
   get "/index/:genre", to: "items#index"
   get "search" => "youtube#search"
+  resources :users, only: [:show]
   resources :posts
   resources :memos
   resources :youtube

@@ -5,7 +5,7 @@ class PostsController < ApplicationController
 
   def index
     @genres = Genre.all
-    @posts = params[:name].present? ? Genre.find(params[:name]).posts : Post.all
+    @posts = params[:name].present? ? Genre.find(params[:name]).posts : Post.where(user_id: current_user.id)
   end
 
   def new
