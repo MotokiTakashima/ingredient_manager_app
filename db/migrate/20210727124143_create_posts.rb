@@ -4,7 +4,6 @@ class CreatePosts < ActiveRecord::Migration[6.1]
       t.string :product
       t.string :memo
       t.date :start_time
-      t.references :user, null: false, foreign_key: true
 
       t.timestamps
     end
