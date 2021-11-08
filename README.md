@@ -1,24 +1,7 @@
-# README
+# アプリ概要
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+購入した食材のロスを無くすための食材管理アプリです。
 
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+- 購入した食材を投稿し、ジャンルごとに管理。
+- 買い物リストに次買うものをメモできる機能。
+- YouTube の料理動画検索できる機能。
