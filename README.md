@@ -53,3 +53,9 @@ https://ingredient-manager.herokuapp.com/
 - YouTubeAPI 検索機能(キーワード検索)
 
 # 開発で工夫したこと
+
+# 使用技術
+
+# ER 図
+
+https://app.diagrams.net/?libs=general;er (2)
