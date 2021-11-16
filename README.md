@@ -58,4 +58,4 @@ https://ingredient-manager.herokuapp.com/
 
 # ER 図
 
-![alt](スクリーンショット 2021-12-04 19.28.55.png)
+![スクリーンショット 2021-12-04 19 28 55](https://user-images.githubusercontent.com/78095577/144706410-0b400f5a-8431-4a3f-ba17-7eb292948b9a.png)
