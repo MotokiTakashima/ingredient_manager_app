@@ -56,7 +56,9 @@ https://ingredient-manager.herokuapp.com/
 
 - YouTubeAPI 検索機能(キーワード検索)
 
-# 開発で工夫したこと
+# トップページ
+
+[画面収録 2021-12-04 20.09.33.gif.zip](https://github.com/MotokiTakashima/ingredient_manager_app/files/7653843/2021-12-04.20.09.33.gif.zip)
 
 # 使用技術
 
