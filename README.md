@@ -58,7 +58,7 @@ https://ingredient-manager.herokuapp.com/
 
 # トップページ
 
-[画面収録 2021-12-04 20.09.33.gif.zip](https://github.com/MotokiTakashima/ingredient_manager_app/files/7653843/2021-12-04.20.09.33.gif.zip)
+[画面収録 2021-12-04 20.09.33.gif.zip](https://github.com/MotokiTakashima/ingredient_manager_app/files/7653843/2021-12-04.20.09.33.gif)
 
 # 使用技術
 
