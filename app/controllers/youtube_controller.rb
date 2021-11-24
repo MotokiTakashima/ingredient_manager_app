@@ -11,7 +11,7 @@ class YoutubeController < ApplicationController
     opt = {
       q: keyword,
       type: "video",
-      max_results: 6,
+      max_results: 9,
       order: :date,
       page_token: next_page_token,
       published_after: after.iso8601,
@@ -24,6 +24,7 @@ class YoutubeController < ApplicationController
 
   def index
     @youtube_data = find_videos(@keyword)
+    @check = params[:search]
   end
 
   def move_to_signed_in

@@ -7,25 +7,28 @@
     <% end %>
   </div>
   <br>
-  <div class="container">
-    <div class="row row-cols-3">
-      <% @youtube_data.items.each do |item| %>
-        <div class="card-box">
-          <div class="card border-dark mb-3">
-            <div class="bd-placeholder-img card-img-top">
-              <% @snippet = item.snippet %>
-              <% @video_id = item.id.video_id %>
-              <div class="embed-responsive embed-responsive-16by9">
-                <div><iframe width="560" height="315" src="https://www.youtube.com/embed/<%= @video_id %>" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
-              </div>
-              <div class="card-body">
-                <h4>タイトル：<%= @snippet.title %></h4>
-                <p>チャンネル名：<%= @snippet.channel_title %></p>
+  <% if @check.present? %>
+    <div class="container">
+      <div class="row row-cols-3">
+        <% @youtube_data.items.each do |item| %>
+          <div class="card-box">
+            <div class="card border-dark mb-3">
+              <div class="bd-placeholder-img card-img-top">
+                <% @snippet = item.snippet %>
+                <% @video_id = item.id.video_id %>
+                <div class="embed-responsive embed-responsive-16by9">
+                  <div><iframe width="560" height="315" src="https://www.youtube.com/embed/<%= @video_id %>" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
+                </div>
+                <div class="card-body">
+                  <h4>タイトル：<%= @snippet.title %></h4>
+                  <p>チャンネル名：<%= @snippet.channel_title %></p>
+                </div>
               </div>
             </div>
           </div>
-        </div>
-      <% end %>
+        <% end %>
+      </div>
     </div>
-  </div>
+  <% else %>
+  <% end %>
 </div>
