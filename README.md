@@ -64,6 +64,10 @@ https://ingredient-manager.herokuapp.com/
 
 ![画面収録 2021-12-04 22 02 42](https://user-images.githubusercontent.com/78095577/144710765-61a71783-dc81-4e11-984d-d5bd3ca341c7.gif)
 
+# 買い物リストページ
+
+![画面収録 2021-12-04 22 07 18](https://user-images.githubusercontent.com/78095577/144710814-086ca5fc-d566-43e7-b94b-37a7320f165a.gif)
+
 # 使用技術
 
 # ER 図
