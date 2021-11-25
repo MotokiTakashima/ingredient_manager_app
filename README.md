@@ -68,6 +68,10 @@ https://ingredient-manager.herokuapp.com/
 
 ![画面収録 2021-12-04 22 07 18](https://user-images.githubusercontent.com/78095577/144710814-086ca5fc-d566-43e7-b94b-37a7320f165a.gif)
 
+# レシピ検索ページ
+
+![画面収録 2021-12-04 22 09 45](https://user-images.githubusercontent.com/78095577/144710890-7988146e-c9ee-4a34-8eda-1c41cfd5572c.gif)
+
 # 使用技術
 
 # ER 図
