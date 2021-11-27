@@ -74,6 +74,13 @@ https://ingredient-manager.herokuapp.com/
 
 # 使用技術
 
+- 言語 : Ruby (3.0.0)
+- フレームワーク：Ruby on Rails (6.1.4.1)
+- フロントエンド : HTML&CSS/Bootstrap/JavaScript/SCSS
+- DB : PostgreSQL
+- インフラ : Heroku(ステージング環境 → 本番環境)
+- ソースコード管理：GitHub
+
 # ER 図
 
 ![スクリーンショット 2021-12-04 19 28 55](https://user-images.githubusercontent.com/78095577/144706410-0b400f5a-8431-4a3f-ba17-7eb292948b9a.png)
