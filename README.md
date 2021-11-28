@@ -57,11 +57,11 @@ https://ingredient-manager.herokuapp.com/
 
 # 使用イメージ
 
-## トップページ
+## ・トップページ
 
 ![画面収録 2021-12-04 21 37 54](https://user-images.githubusercontent.com/78095577/144709810-ec3a72bf-8716-4347-a526-efd40ebef98b.gif)
 
-## 在庫一覧ページ
+## ・在庫一覧ページ
 
 ![画面収録 2021-12-04 22 02 42](https://user-images.githubusercontent.com/78095577/144710765-61a71783-dc81-4e11-984d-d5bd3ca341c7.gif)
 
@@ -70,7 +70,7 @@ https://ingredient-manager.herokuapp.com/
 - 商品ごとにジャンル分けのできるよう、grene テーブルと post テーブルを関連づけし、タグ機能を追加しました。
 - simple-calendar と連動させ、投稿した内容をカレンダーでも確認できるように設定しました。
 
-## 買い物リストページ
+## ・買い物リストページ
 
 ![画面収録 2021-12-04 22 07 18](https://user-images.githubusercontent.com/78095577/144710814-086ca5fc-d566-43e7-b94b-37a7320f165a.gif)
 
@@ -82,7 +82,7 @@ https://ingredient-manager.herokuapp.com/
 
 - メモリストから直接、post テーブルに食材を追加する機能。
 
-## レシピ検索ページ
+## ・レシピ検索ページ
 
 ![画面収録 2021-12-04 22 09 45](https://user-images.githubusercontent.com/78095577/144710890-7988146e-c9ee-4a34-8eda-1c41cfd5572c.gif)
 
