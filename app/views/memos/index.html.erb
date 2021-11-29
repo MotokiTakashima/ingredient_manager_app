@@ -26,6 +26,7 @@
             <th scope="col">商品</th>
             <th scope="col">備考</th>
             <th scope="col"></th>
+            <th scope="col"></th>
           </tr>
         </thead>
         <tbody>
@@ -33,6 +34,11 @@
             <tr>
               <td><%= link_to "#{memo.title}", edit_memo_path(memo) %></td>
               <td><%= memo.content %></td>
+              <td class="botton">
+                <%= link_to new_post_path, class: "btn btn-outline-primary" do %>
+                  <span class="d-none d-md-inline"> 冷蔵庫に追加</span>
+                <% end %>
+              </td>
               <td class="botton">
                 <%= link_to memo, method: :delete, class: "btn btn-outline-danger" do %>
                   <i class="far fa-trash-alt"></i> <span class="d-none d-md-inline"> 削除</span>
