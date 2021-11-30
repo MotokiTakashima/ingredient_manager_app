@@ -86,6 +86,14 @@ https://ingredient-manager.herokuapp.com/
 
 ![画面収録 2021-12-04 22 09 45](https://user-images.githubusercontent.com/78095577/144710890-7988146e-c9ee-4a34-8eda-1c41cfd5572c.gif)
 
+### 工夫したこと
+
+- YouTubeAPI を使い、キーワード検索で呼び出すようにしました。Ruby での YouTube 検索機能の実装は、調べると出てきますが、Rails のものはなく、試行錯誤しました。
+
+### これから追加したい機能
+
+- 動画をお気に入りに追加し、マイページから閲覧できるようにする機能。
+
 # 使用技術
 
 - 言語 : Ruby (3.0.0)
