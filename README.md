@@ -103,6 +103,7 @@
 - DB : PostgreSQL
 - インフラ : Heroku(ステージング環境 → 本番環境)
 - ソースコード管理：GitHub
+- 開発環境：MacOS/Visual Studio Code
 
 # ER 図
 
