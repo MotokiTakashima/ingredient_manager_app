@@ -9,6 +9,7 @@
 # URL
 
 https://ingredient-manager.herokuapp.com/
+ゲストログインボタンからゲストユーザーとしてログイン可能です。
 
 # 作成背景
 
