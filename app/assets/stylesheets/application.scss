@@ -46,7 +46,7 @@ body {
   word-break: break-word;
 }
 
-.main-page {
+.page {
   padding: 30px 30px;
 }
 
@@ -79,5 +79,22 @@ img {
 
 .search-form {
   display: flex;
+  justify-content: center;
+}
+
+// devise関連ページの配置調節
+.mw-md {
+  max-width: 576px;
+}
+
+.mw-xl {
+  max-width: 1200px;
+}
+
+a {
+  text-decoration: none !important;
+}
+
+.pagination {
   justify-content: center;
 }

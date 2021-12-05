@@ -12,6 +12,7 @@
 
 ActiveRecord::Schema.define(version: 2021_10_31_081520) do
 
+
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
@@ -26,6 +27,7 @@ ActiveRecord::Schema.define(version: 2021_10_31_081520) do
     t.string "content"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.integer "user_id"
   end
 
   create_table "post_genres", force: :cascade do |t|
@@ -41,7 +43,6 @@ ActiveRecord::Schema.define(version: 2021_10_31_081520) do
     t.string "product"
     t.string "memo"
     t.date "start_time"
-    t.integer "genre"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.integer "user_id"

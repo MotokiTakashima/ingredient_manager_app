@@ -1,24 +1,110 @@
-# README
+# 食材管理アプリ
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+![スクリーンショット 2021-12-04 19 50 50](https://user-images.githubusercontent.com/78095577/144706808-8b93d4ca-ca08-4387-a449-e613fd2057a4.png)
 
-Things you may want to cover:
+# アプリ概要
 
-* Ruby version
+購入した食材のロスを無くすための食材管理アプリです。
+食材管理の他に、買い物メモ、YouTube でレシピ検索などができます。
 
-* System dependencies
+# URL
 
-* Configuration
+### https://ingredient-manager.herokuapp.com/
 
-* Database creation
+ゲストログインボタンからゲストユーザーとしてログイン可能です。
 
-* Database initialization
+# 作成背景
 
-* How to run the test suite
+### 冷蔵庫の中の物のうっかり忘れを無くしたい
 
-* Services (job queues, cache servers, search engines, etc.)
+前職で飲食の仕事をしていて、うっかり冷蔵庫の食材をダメにしてしまうことがあり、食材を管理できるアプリが欲しいと思い作成しました。  
+作成するにあたって、ただ文字だけを並べても見にくいので、一目見ただけで食材の期日がわかるようにカレンダーと連動させ、一般家庭向けに買い物メモとレシピ検索も一つのアプリでできればと思い作成しました。
 
-* Deployment instructions
+# 機能一覧
 
-* ...
+- ユーザー登録機能
+
+  - メールアドレス
+  - パスワード
+
+- ログイン機能
+
+  - devise でログイン機能を実装
+  - ゲストログイン機能を実装
+  - パスワードを忘れた場合のパスワード再発行機能
+
+- 管理者ページ
+
+  - ActiveAdmin で実装
+    - ユーザー登録・編集・削除
+    - 投稿の登録・編集・削除
+
+- 投稿ページ
+
+  - 商品名・ジャンル・賞味期限・備考を登録する機能
+  - 編集機能
+  - 削除機能
+  - ジャンル分け機能
+
+- メモページ
+
+  - 投稿機能
+  - 編集機能
+  - 削除機能
+
+- 検索ページ
+- YouTubeAPI 検索機能(キーワード検索)
+
+# 使用イメージ
+
+## ・トップページ
+
+![画面収録 2021-12-04 21 37 54](https://user-images.githubusercontent.com/78095577/144709810-ec3a72bf-8716-4347-a526-efd40ebef98b.gif)
+
+## ・在庫一覧ページ
+
+![画面収録 2021-12-04 22 02 42](https://user-images.githubusercontent.com/78095577/144710765-61a71783-dc81-4e11-984d-d5bd3ca341c7.gif)
+
+### 工夫したこと
+
+- 商品ごとにジャンル分けのできるよう、grene テーブルと post テーブルを関連づけし、タグ機能を追加しました。
+- simple-calendar と連動させ、投稿した内容をカレンダーでも確認できるように設定しました。
+
+## ・買い物リストページ
+
+![画面収録 2021-12-04 22 07 18](https://user-images.githubusercontent.com/78095577/144710814-086ca5fc-d566-43e7-b94b-37a7320f165a.gif)
+
+### 工夫したこと
+
+- scss を活用し、リスト追加はスクロールで動かないように固定しました。
+
+### これから追加したい機能
+
+- メモリストから直接、post テーブルに食材を追加する機能。
+
+## ・レシピ検索ページ
+
+![画面収録 2021-12-04 22 09 45](https://user-images.githubusercontent.com/78095577/144710890-7988146e-c9ee-4a34-8eda-1c41cfd5572c.gif)
+
+### 工夫したこと
+
+- YouTubeAPI を使い、キーワード検索で呼び出すようにしました。Ruby での YouTube 検索機能の実装は、調べると出てきますが、Rails のものはなく、試行錯誤しました。
+- YouTube 動画の大きさをレスポンシブ対応にしています。
+
+### これから追加したい機能
+
+- 動画をお気に入りに追加し、マイページから閲覧できるようにする機能。
+
+# 使用技術
+
+- 言語 : Ruby (3.0.0)
+- フレームワーク：Ruby on Rails (6.1.4.1)
+- フロントエンド : HTML&CSS/Bootstrap/JavaScript/SCSS
+- DB : PostgreSQL
+- インフラ : Heroku(ステージング環境 → 本番環境)
+- ソースコード管理：GitHub
+- 開発環境：MacOS/Visual Studio Code
+
+# ER 図
+
+![スクリーンショット 2021-12-04 19 28 55](https://user-images.githubusercontent.com/78095577/144706410-0b400f5a-8431-4a3f-ba17-7eb292948b9a.png)
