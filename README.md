@@ -9,7 +9,7 @@
 
 # URL
 
-https://ingredient-manager.herokuapp.com/
+### https://ingredient-manager.herokuapp.com/
 
 ゲストログインボタンからゲストユーザーとしてログイン可能です。
 
@@ -89,6 +89,7 @@ https://ingredient-manager.herokuapp.com/
 ### 工夫したこと
 
 - YouTubeAPI を使い、キーワード検索で呼び出すようにしました。Ruby での YouTube 検索機能の実装は、調べると出てきますが、Rails のものはなく、試行錯誤しました。
+- YouTube 動画の大きさをレスポンシブ対応にしています。
 
 ### これから追加したい機能
 
@@ -102,6 +103,7 @@ https://ingredient-manager.herokuapp.com/
 - DB : PostgreSQL
 - インフラ : Heroku(ステージング環境 → 本番環境)
 - ソースコード管理：GitHub
+- 開発環境：MacOS/Visual Studio Code
 
 # ER 図
 
