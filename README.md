@@ -103,8 +103,13 @@
 - DB : PostgreSQL
 - インフラ : Heroku(ステージング環境 → 本番環境)
 - ソースコード管理：GitHub
-- 開発環境：MacOS/Visual Studio Code
+- 開発環境：MacOS/Visual Studio Code(1.61.2)
+- GoogleYouTubeAPI
 
 # ER 図
 
 ![スクリーンショット 2021-12-04 19 28 55](https://user-images.githubusercontent.com/78095577/144706410-0b400f5a-8431-4a3f-ba17-7eb292948b9a.png)
+
+# 画面遷移図
+
+![スクリーンショット 2021-12-08 20 34 17](https://user-images.githubusercontent.com/78095577/145202047-99eab1f6-4858-4861-b070-ef58c86b0f34.png)
