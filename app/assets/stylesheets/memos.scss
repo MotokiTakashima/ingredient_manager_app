@@ -1,5 +1,5 @@
 .memos-container {
-  padding: 30px 30px;
+  padding: 10px 30px;
 }
 
 .botton {
@@ -13,22 +13,35 @@
 
 .split-item {
   display: table-cell;
-  padding: 30px;
-  width: 30%;
+  padding: 60px;
+  width: 50%;
 }
 
 .split-left {
-  float:left;
   position: relative;
 }
 
 .split-left__inner {
-  height: 50px;
+  height: 100%;
   position: fixed;
-  width: 30%;
+  width: 80%;
 }
 
 .split-right__inner {
   height: 8000px;
-  width: 100%;
+}
+@media screen and (max-width: 724px) {
+  .split {
+    display: block;
+  }
+
+  .split-item {
+    display: block;
+    width: auto;
+  }
+
+  .split-left__inner {
+    position: inherit;
+    width: auto;
+  }
 }
