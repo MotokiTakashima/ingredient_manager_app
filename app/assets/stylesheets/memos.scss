@@ -13,11 +13,15 @@
 
 .split-item {
   display: table-cell;
-  padding: 60px;
-  width: 50%;
+  padding: 40px;
+  width: 10%;
 }
 
 .split-left {
+  position: relative;
+}
+
+.split-right {
   position: relative;
 }
 
@@ -27,9 +31,6 @@
   width: 80%;
 }
 
-.split-right__inner {
-  height: 8000px;
-}
 @media screen and (max-width: 724px) {
   .split {
     display: block;
