@@ -2,7 +2,7 @@
   <h1 class="text-center">レシピ検索</h1>
   <div class="search-form">
     <%= form_tag(youtube_index_path, method: :get) do %>
-      <%= text_field_tag :search, "", placeholder:"(材料)レシピ で検索" %>
+      <%= text_field_tag :search, "", placeholder:"'材料'レシピ で検索" %>
       <%= submit_tag '検索' %>
     <% end %>
   </div>
