@@ -52,7 +52,7 @@
       <%= date.day %>
       <% posts.each do |post| %>
         <div>
-          <%= link_to post.product, post %>
+          <%= link_to post.product, edit_post_path(post) %>
         </div>
       <% end %>
     <% end %>
