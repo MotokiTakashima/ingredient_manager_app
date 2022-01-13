@@ -29,7 +29,7 @@ gem 'jbuilder', '~> 2.7'
 gem 'bootsnap', '>= 1.4.4', require: false
 # ログイン機能
 gem 'devise'
-# 多言語対応(Rails 6の場合)
+# 多言語対応
 gem 'devise-i18n'
 gem 'rails-i18n', '~> 6.0'
 
@@ -55,6 +55,6 @@ group :development do
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
-gem 'tzinfo-data', platforms: %i[mingw mswin x64_mingw jruby]
 gem 'dotenv-rails'
 gem 'google-api-client', '0.9.20', require: 'google/apis/youtube_v3'
+gem 'tzinfo-data', platforms: %i[mingw mswin x64_mingw jruby]
