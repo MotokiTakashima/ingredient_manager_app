@@ -1,1 +1,105 @@
-
+<div class="main-container" >
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <h2>あなたの冷蔵庫、見守ります</h2>
+  <p>
+    毎日開けてる冷蔵庫<br>
+    でもうっかりこの食材忘れてた<br>
+    そんなことをなくすためのサイトです。
+  </p>
+  <div class="btn-container">
+    <% if user_signed_in? %>
+      <%# ログイン時 %>
+      <%= link_to "在庫をチェック", posts_path, class: "btn btn-outline-info rounded-pill" %>
+      <%= link_to "買い物リストを見る", memos_path, class: "btn btn-outline-info rounded-pill" %>
+      <%= link_to "レシピを検索", posts_path, class: "btn btn-outline-info rounded-pill" %>
+    <% else %>
+      <%# 非ログイン時 %>
+      <%= link_to "ログイン", new_user_session_path, class: 'btn btn-outline-info rounded-pill' %>
+      <%= link_to "ゲストログイン（閲覧用）", users_guest_sign_in_path, method: :post, class: 'btn btn-outline-success rounded-pill' %>
+    <% end %>
+  </div>
+</div>
+<div>
+  <section class="contents">
+    <div class="description" style="text-align:center">
+      <h2>アプリ説明</h2>
+      <p>
+        冷蔵庫の今ある食材の中身を<br>
+        確認、管理できるサービスです。
+      </p>
+    </div>
+  </section>
+</div>
+<div class="container-fluid py-5 mw-md">
+  <section>
+    <div class="row featurette">
+      <div class="col-md-6">
+        <h3 class="featurette-heading">
+          <span class="text-muted">
+            購入したものを一覧に登録
+          </span>
+        </h3>
+        <p>
+          購入した商品をリストに追加し<br>
+          商品の更新、削除ができます。<br>
+          また、期限の近い食材を<br>
+          確認することがだきます。
+        </p>
+      </div>
+      <div class="col-md-6">
+        <img class="featurette-image img-fluid" src="/assets/Memory storage-bro.png">
+      </div>
+    </div>
+  </section>
+  <section>
+    <div class="row featurette">
+      <div class="col-md-6 order-md-2">
+        <h2 class="featurette-heading">
+          <span class="text-muted">
+            買い物リスト
+          </span>
+        </h2>
+        <p>
+          次買わないといけない商品を<br>
+          メモに残しておくことができます。
+        </p>
+      </div>
+      <div class="col-md-6 order-md-1">
+        <img class="featurette-image img-fluid" src="/assets/Eco shopping-amico.png">
+      </div>
+    </div>
+  </section>
+  <section>
+    <div class="row featurette">
+      <div class="col-md-6">
+        <h2 class="featurette-heading">
+          <span class="text-muted">
+            レシピ検索機能
+          </span>
+        </h2>
+        <p>
+          本サービスからレシピを検索し<br>
+          youtube動画を視聴できます。
+        </p>
+      </div>
+      <div class="col-md-6">
+        <img class="featurette-image img-fluid" src="/assets/Mobile note list-amico.png" >
+      </div>
+    </div>
+  </section>
+</div>
+<section >
+  <div class="row justify-content-center">
+    <div class="col-lg-6 d-flex flex-column">
+      <h4 class="text-center">さあ はじめよう!</h4>
+      <p class="text-center">登録は1分で完了します</p>
+      <div>
+        <div class="text-center text-lg-start">
+          <%= link_to "今すぐはじめる", new_user_registration_path, class: 'btn btn-outline-info rounded-pill' %>
+          <%= link_to "ゲストログイン", users_guest_sign_in_path, method: :post, class: 'btn btn-outline-success rounded-pill' %>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+</div>
